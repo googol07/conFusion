@@ -22,16 +22,59 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>       <!--adding the small logo image making it small by setting height and width -->
-           <div class ="collapse navbar-collapse" id = "Navbar">
+           <div class ="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home </a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About </a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu </a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
-                </ul>
+                    
+                </ul>      
            </div>                
         </div>
+        <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+            <span class="fa fa-sign-in"></span> Login</a>
+        </span>
+
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class = "jumbotron">
         <div class = "container">
@@ -44,21 +87,24 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
+                <div class="col-12 col-sm align-self-center">
+                    <a role="button" class="btn btn-block nav-link btn-warning"
+                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong> "
+                        data-placement="bottom" href="#reserveform">Reserve Table</a> 
+                </div>
+                
             </div>
         </div>
     </header>
 
     <div class = "container">
-        <div class = "row row-content">
-            <div class = "col-12 col-sm-4 col-md-5">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class = "col-12 col-sm-4 col-md-7">
+        <div class = "row row-content">           
+            <div class = "col-12 col-sm-4 col-md-9">
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail align-self-center"  
                             src="img/uthappizza.png" alt="Uthappizza">         <!--adding a image--> 
                     <div class="media-body">
-                        <h2 class="mt-0">Uthappizza</h2>
+                        <h2 class="mt-0">Uthappizza<span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2> <!--adding two badges in front of dish-->
                         <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
                             Italian pizza, topped with Cerignola olives, ripe vine
                             cherry tomatoes, Vidalia onion, Guntur chillies and
@@ -66,19 +112,26 @@
                     </div>
                 </div>
             </div>
+            <div class = "col-12 col-sm-4 col-md-3">
+                <h3>Our Lipsmacking Culinary Creations</h3>
+            </div>
         </div>
 
 
-        <div class = "row row-header">
-            <div class = "col-12 col-sm-4 col-md-6">
+        <div class = "row row-content">
+            <div class = "col-12 col-sm-2 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class = "col-12 col-sm-4 col-md-3">
-                <h2>Weekend Grand Buffet</h2>
+            <div class = "col-12 col-sm-6 col-md-6">
+                <h2>Weekend Grand Buffet <span class="badge badge-danger">HOT</span> </h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
             </div>
+            <div class = "col-12 col-sm-4 col-md-3">
+                <img class="d-flex mr-3 img-thumbnail align-self-center"  
+                            src="img/buffet.png" alt="buffet">
+            </div>
         </div>
-
+    
         <div class = "row row-content">
             <div class = "col-12 col-sm-4 col-md-5">
                 <h3>Meet our Culinary Specialists</h3>
@@ -100,6 +153,70 @@
             </div>
         </div>
     </div>
+
+    
+    <form id ="reserveform">                            <!--setting id here so that it can be used as a link which can direct the reserve table button to this place ie to this form-->
+    <div class = "row row-content">       
+    <div class="col-12 offset-2 col-sm-6" >           <!--this is a card-->
+        <div class="card ">
+            <h3 class="card-header bg-warning text-white">Reserve a Table</h3>         <!--bg-warning is the ellowish colour in background for in bootstrap-->
+            <div class="card-body">
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <p>Number <br> of Guests </p>
+                    </div>  
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">1</label>
+                    </div>                
+                
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">2</label>
+                    </div>
+                    
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline3">3</label>
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline4">4</label>
+                    </div>                
+                
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline5">5</label>
+                    </div>
+                    
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline6">6</label>
+                    </div>
+                    <!--it was only radio buttons in the card uptill now-->
+
+                    <div class="form-group row">
+                        <label for="telnum" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                        <div class="col-5 col-md-3">
+                            <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Date">
+                        </div>
+                        <div class="col-7 col-md-3">
+                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Time">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">submit</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>   
+    </form>   
 
     <footer class = "footer">
         <div class = "container">
